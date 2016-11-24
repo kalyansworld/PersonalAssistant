@@ -1,1 +1,1 @@
-"# PersonalAssistant" 
+ATS personal assistant client application will notify the user on daily basis when logged into the system, to update the office late entry reason in the ATS system.
