@@ -15,10 +15,24 @@
 }
 
 #notificationImg {
-  position: absolute;
-  left: 0;
-  top: 0;
+
+  margin: 0 auto;
 }
+
+.name {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 40px/1 "Trebuchet MS", Helvetica, sans-serif;
+  color: rgba(99,94,94,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgb(255,255,255);
+  text-shadow: 1px 1px 5px rgba(125,129,132,0.91) ;
+  text-align: center;
+}
+
 #text {
   z-index: 100;
   position: absolute;
@@ -31,8 +45,8 @@
 .numberCircle {
     border-radius: 50%;
     
-    width: 36px;
-    height: 36px;
+    width: 60px;
+    height: 60px;
     padding: 8px;
 
     background: #FFC40C;
@@ -43,7 +57,7 @@
     font: 18px sans-serif;
     position: absolute;
 
-    top: 43px;
-    left: 260px;
+    top: 113px;
+    left: 870px;
 
 }

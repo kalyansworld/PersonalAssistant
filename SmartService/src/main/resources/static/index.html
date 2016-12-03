@@ -12,20 +12,18 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-<h2>Hello XXX</h2>
 
 
-<div class="home-section" ng-controller="notificationController">
-    <ul class="menu-list">
-    	<li ng-repeat="x in notificationList">{{x.description}}<sup>{{x.count}}</sup></li>
-    </ul>
-    <img id="notificationImg" src="/images/bell.png" class="img-responsive" alt="Notification" width="304" height="236" />
+
+<div ng-controller="notificationController">
+	<div class="name">Hello Kalyan</div>
+    <img id="notificationImg" src="/images/bell.png" class="img-responsive" alt="Notification" width="512" height="512" />
   	<div class="numberCircle">{{notificationCount}}</div>
 </div>
 
 
 
-<div ng-view></div>
+
 <script src="/webjars/angularjs/1.5.8/angular.js"></script>
 <script src="/webjars/angularjs/1.5.8/angular-resource.js"></script>
 <script src="/webjars/angularjs/1.5.8/angular-route.js"></script>
