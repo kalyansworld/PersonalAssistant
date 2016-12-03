@@ -1,0 +1,49 @@
+.menu-list{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.home-section{
+    float:left;
+    width: 10%;
+}
+.section{
+    margin-left: 10%;
+    float:left;
+}
+.photo{
+    padding-right: 5px;
+}
+
+#notificationImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: black
+  font-size: 24px;
+  font-weight: bold;
+  left: 270px;
+  top: 50px;
+}
+.numberCircle {
+    border-radius: 50%;
+    
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    background: #FFC40C;
+    border: 2px solid #666;
+    color: #fff;
+    text-align: center;
+
+    font: 18px sans-serif;
+    position: absolute;
+
+    top: 43px;
+    left: 260px;
+
+}

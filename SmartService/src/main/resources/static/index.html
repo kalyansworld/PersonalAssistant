@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spring Bot</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<h2>Hello XXX</h2>
+
+
+<div class="home-section" ng-controller="notificationController">
+    <ul class="menu-list">
+    	<li ng-repeat="x in notificationList">{{x.description}}<sup>{{x.count}}</sup></li>
+    </ul>
+    <img id="notificationImg" src="/images/bell.png" class="img-responsive" alt="Notification" width="304" height="236" />
+  	<div class="numberCircle">{{notificationCount}}</div>
+</div>
+
+
+
+<div ng-view></div>
+<script src="/webjars/angularjs/1.5.8/angular.js"></script>
+<script src="/webjars/angularjs/1.5.8/angular-resource.js"></script>
+<script src="/webjars/angularjs/1.5.8/angular-route.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controller.js"></script>
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.css">
+</body>
+</html>
