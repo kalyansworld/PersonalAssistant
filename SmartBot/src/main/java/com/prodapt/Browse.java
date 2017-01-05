@@ -1,5 +1,6 @@
 package com.prodapt;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.geometry.HPos;
 import javafx.geometry.Rectangle2D;
@@ -23,13 +24,15 @@ import netscape.javascript.JSObject;
 import org.w3c.dom.Document;
  
  
-public class Browse extends Application {
+public class Browse extends Application implements Runnable {
     private Scene scene;
     @Override public void start(Stage stage) {
         // create the scene
-        stage.setTitle("Web View");
+        stage.setTitle("Smart Bot");
         scene = new Scene(new Browser(),200,300, Color.web("#666970"));
         stage.setScene(scene);
+        stage.setMaxHeight(300);
+        stage.setMaxWidth(200);
         //scene.getStylesheets().add("webviewsample/BrowserToolbar.css");   
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
         stage.setX(primaryScreenBounds.getMinX() + primaryScreenBounds.getWidth() - 200);
@@ -37,11 +40,25 @@ public class Browse extends Application {
         stage.setWidth(200);
         stage.setHeight(300);
         stage.show();
+        
+        
+    }
+    
+    public void stop(){
+    	Platform.exit();
     }
  
     public static void main(String[] args){
-        launch(args);
+       
     }
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		String[] test = null;
+		 launch(test);
+		
+	}
 }
 class Browser extends Region {
  
@@ -63,7 +80,6 @@ class Browser extends Region {
         
         webEngine.getLoadWorker().stateProperty().addListener(
                 new ChangeListener<State>() {
-                    @Override
                     public void changed(ObservableValue<? extends State> ov,
                         State oldState, State newState) {
                         if (newState == State.SUCCEEDED) {
